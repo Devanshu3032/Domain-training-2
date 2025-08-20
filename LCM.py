@@ -1,12 +1,13 @@
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    return a
-
-def lcm(a, b):
-    return abs(a * b) // gcd(a, b)
-
-# Example usage
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
-print(f"The LCM of {num1} and {num2} is {lcm(num1, num2)}")
+a=int(input("Enter any num1:"))
+b=int(input("Enter any num2:"))
+if a>b:
+    big=a
+else:
+    big=b
+step=big
+while(True):
+    if big%a==0 and big%b==0:
+        break
+    else:
+        big=big+step
+print("The LCM of", a, "and", b, "is", big)
